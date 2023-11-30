@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledFooterItem = styled.div`
@@ -21,8 +22,12 @@ const StyledFooterItem = styled.div`
   }
 `;
 
-function FooterItem({ children, href }) {
-  return <StyledFooterItem href={href}>{children}</StyledFooterItem>;
+function FooterItem({ children, link }) {
+  return (
+    <Link to={link}>
+      <StyledFooterItem>{children}</StyledFooterItem>
+    </Link>
+  );
 }
 
 export default FooterItem;

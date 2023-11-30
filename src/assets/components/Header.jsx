@@ -16,7 +16,8 @@ const StyledHeaderContainer = styled.div`
   width: var(--initial-width);
   height: 5.6rem;
   background-color: var(--primary-color);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
   color: white;
 
   :first-child {

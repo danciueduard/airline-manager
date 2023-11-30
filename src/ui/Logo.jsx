@@ -1,9 +1,18 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledLogoLayout = styled.div``;
+const StyledLogo = styled.div`
+  color: white;
+`;
 
 function Logo() {
-  return <StyledLogoLayout>LOGO</StyledLogoLayout>;
+  return (
+    <>
+      <StyledLogo>
+        <Link to="map">LOGO</Link>
+      </StyledLogo>
+    </>
+  );
 }
 
 export default Logo;

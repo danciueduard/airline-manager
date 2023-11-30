@@ -18,13 +18,13 @@ const StyledFooterContainer = styled.div`
   width: var(--initial-width);
   height: 5rem;
   background-color: #ffffff;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 `;
 
 function Footer() {
   return (
     <StyledFooterContainer>
-      <FooterItem>
+      <FooterItem link="/fleet">
         <BsAirplane /> <span>Fleet</span>
       </FooterItem>
 
