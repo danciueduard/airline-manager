@@ -1,32 +1,28 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledFooterItem = styled.div`
-  color: var(--primary-color);
-
+const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
+  margin: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
 
   :first-child {
-    color: var(--color-orange-600);
-    font-size: 2rem;
+    color: var(--secondary-color);
   }
-
-  a,
-  span {
+  :nth-child(2) {
     font-size: 0.8rem;
   }
 `;
 
-function FooterItem({ children, link }) {
+function FooterItem({ linkTo, tag, icon }) {
   return (
-    <Link to={link}>
-      <StyledFooterItem>{children}</StyledFooterItem>
-    </Link>
+    <StyledLink to={linkTo}>
+      <span>{icon}</span>
+      <span>{tag}</span>
+    </StyledLink>
   );
 }
 

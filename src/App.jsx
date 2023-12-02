@@ -1,8 +1,9 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppLayout from "./assets/AppLayout";
-import Map from "./assets/components/Map";
-import FleetContainer from "./pages/fleet/FleetContainer";
+import AppLayout from "./AppLayout";
+import Map from "./components/Map";
+import Airports from "./pages/airport/Airports";
+import Fleet from "./pages/fleet/Fleet";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route path="map" element={<Map />} />
-            <Route path="fleet" element={<FleetContainer />} />
+            <Route path="fleet" element={<Fleet />} />
+            <Route path="airports" element={<Airports />} />
           </Route>
         </Routes>
       </BrowserRouter>
