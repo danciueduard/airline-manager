@@ -21,6 +21,10 @@ body {
   font-family: 'Nova Square', sans-serif;
 }
 
+button {
+  font-family: 'Nova Square', sans-serif;
+}
+
 
 // HIDE SCROLLBAR
 body::-webkit-scrollbar {

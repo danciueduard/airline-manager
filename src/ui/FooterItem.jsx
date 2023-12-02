@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
+  width: 100px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
   text-decoration: none;
   color: var(--primary-color);
+  /* background-color: red; */
 
   :first-child {
     color: var(--secondary-color);

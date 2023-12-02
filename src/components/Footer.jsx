@@ -9,7 +9,6 @@ const StyledFooterContainer = styled.div`
   position: fixed;
   bottom: 0;
   display: flex;
-  gap: 3.2rem;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;

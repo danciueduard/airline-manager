@@ -9,7 +9,7 @@ const StyledMenu = styled.div`
   justify-content: center;
   position: absolute;
 
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(14px);
   z-index: 500;
   height: 100vh;
@@ -24,11 +24,11 @@ const StyledMenu = styled.div`
     top: 9.5%;
     background: none;
     border: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
 
   li {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 800;
     text-transform: uppercase;
   }

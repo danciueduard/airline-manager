@@ -1,42 +1,30 @@
-// Staff.js
-import React from "react";
 import styled from "styled-components";
+import StaffItem from "./StaffItem";
 
 const StyledStaff = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-`;
-
-const StaffCard = styled.div`
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  text-align: center;
-
-  h3 {
-    margin-bottom: 10px;
+  & {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding-top: var(--margin-top-fix);
+    height: 100vh;
+    overflow-y: auto;
   }
-
-  p {
-    color: #555;
+  &::-webkit-scrollbar {
+    display: none;
   }
 `;
 
-const Staff = ({ staffList }) => {
+function Staff() {
   return (
     <StyledStaff>
-      {staffList.map((staff, index) => (
-        <StaffCard key={index}>
-          <h3>{staff.name}</h3>
-          <p>{staff.position}</p>
-          {/* Add more details or actions as needed */}
-        </StaffCard>
-      ))}
+      <StaffItem imgSrc="/pilot.jpg" label="Pilots" />
+      <StaffItem imgSrc="/cabin-crew.jpg" vertical="-70%" label="Cabin Crew" />
+      <StaffItem imgSrc="/workers.jpg" vertical="-70%" label="Ground Workers" />
     </StyledStaff>
   );
-};
+}
 
 export default Staff;

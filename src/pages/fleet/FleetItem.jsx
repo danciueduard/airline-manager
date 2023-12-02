@@ -20,20 +20,21 @@ const StyledFlexItemContainer = styled.div`
   .mid {
     display: flex;
     flex-direction: column;
-    height: 6rem;
-    gap: 1px;
+    justify-content: center;
   }
 
   .end {
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 0.4rem;
     text-align: end;
     flex-grow: 1;
     padding-right: 1rem;
   }
 
-  p {
+  p,
+  h3 {
     margin: 0;
   }
 `;
