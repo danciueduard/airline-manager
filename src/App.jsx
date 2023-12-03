@@ -5,6 +5,7 @@ import Map from "./components/Map";
 import Airports from "./pages/airport/Airports";
 import Fleet from "./pages/fleet/Fleet";
 import Staff from "./pages/staff/Staff";
+import Services from "./pages/servicesPage/Services";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="fleet" element={<Fleet />} />
             <Route path="airports" element={<Airports />} />
             <Route path="staff" element={<Staff />} />
+            <Route path="services" element={<Services />} />
           </Route>
         </Routes>
       </BrowserRouter>
