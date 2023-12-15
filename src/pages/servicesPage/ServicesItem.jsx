@@ -68,21 +68,12 @@ const StyledContent = styled.div`
   }
 `;
 
-function ServiceItem({ label, img, data }) {
+function ServiceItem() {
   return (
     <ServiceCardContainer>
-      <img src={img} alt="" />
-      <StyledTitle>{label}</StyledTitle>
-      <StyledContent>
-        {data.map((item) => {
-          return (
-            <div key={Math.random()}>
-              {item.label}
-              <br /> <span>{item.count}</span>
-            </div>
-          );
-        })}
-      </StyledContent>
+      <img src={"img"} alt="" />
+      <StyledTitle>{"%TITLE%"}</StyledTitle>
+      <StyledContent></StyledContent>
     </ServiceCardContainer>
   );
 }

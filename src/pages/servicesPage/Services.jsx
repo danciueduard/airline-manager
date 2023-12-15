@@ -1,6 +1,6 @@
 // ServicesPage.jsx
 import styled from "styled-components";
-import ServiceItem from "./ServicesItem";
+import ServicesMenu from "./ServicesMenu";
 
 const StyledServicesContainer = styled.div`
   & {
@@ -54,58 +54,39 @@ const StyledServicesContainer = styled.div`
 
 /// !!!!! NEED FIX ON DATA FLOW !!!!!!
 
-const mockData = [
-  {
+const mockData = {
+  chefs: {
     label: "Chefs",
     count: 2,
     key: "chefs",
   },
-  {
+  vehicles: {
     label: "Vehicles",
     count: 4,
     key: "vehicles",
   },
-  {
+  menu: {
     label: "Menu Items",
     count: 4,
     key: "menu-items",
   },
-  {
+  pushback: {
     label: "Vehicles",
     count: 3,
     key: "pushback-vehicles",
   },
-  {
+  workers: {
     label: "Workers",
     count: 6,
     key: "pushback-workers",
   },
-];
+};
 function Services() {
-  console.log(mockData);
+  console.log(mockData.chefs.label);
 
   return (
     <StyledServicesContainer>
-      {/* <ServiceItem
-        key={cateringData.key}
-        data={cateringData}
-        label={cateringData[1]}
-        img={cateringData[0]}
-      />
-      <ServiceItem
-        key={pushbackData.key}
-        data={pushbackData}
-        label={pushbackData[1]}
-        img={pushbackData[0]}
-      /> */}
-      {/* {mockData.map((item) => {
-        <ServiceItem
-          key={item.key}
-          data={item}
-          label={item[1]}
-          img={item[0]}
-        />;
-      })} */}
+      <ServicesMenu />
     </StyledServicesContainer>
   );
 }
