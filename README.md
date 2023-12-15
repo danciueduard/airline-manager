@@ -1,7 +1,3 @@
-#Airline Manager
-
-    Currently in very early phases
-=======
 # Airline Manager
 > Currently in very early phases
 
