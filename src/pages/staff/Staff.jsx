@@ -21,8 +21,12 @@ function Staff() {
   return (
     <StyledStaff>
       <StaffItem imgSrc="/pilot.jpg" label="Pilots" />
-      <StaffItem imgSrc="/cabin-crew.jpg" vertical="-70%" label="Cabin Crew" />
-      <StaffItem imgSrc="/workers.jpg" vertical="-70%" label="Ground Workers" />
+      <StaffItem imgSrc="/cabin-crew.jpg" direction="-70%" label="Cabin Crew" />
+      <StaffItem
+        imgSrc="/workers.jpg"
+        direction="-70%"
+        label="Ground Workers"
+      />
     </StyledStaff>
   );
 }

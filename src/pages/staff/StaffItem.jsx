@@ -23,7 +23,7 @@ const StyledStaffItem = styled.button`
     width: 600px;
     height: 400px;
     top: -30%;
-    top: ${(props) => props.vertical};
+    top: ${(props) => props.direction};
     filter: brightness(50%);
 
     @media (max-width: 560px) {
@@ -45,9 +45,9 @@ const StyledStaffItem = styled.button`
   }
 `;
 
-function StaffItem({ imgSrc, vertical, label }) {
+function StaffItem({ imgSrc, direction, label }) {
   return (
-    <StyledStaffItem vertical={vertical}>
+    <StyledStaffItem direction={direction}>
       <p>{label}</p>
       <img src={imgSrc} alt={`Image of %CITY%`} />
     </StyledStaffItem>
