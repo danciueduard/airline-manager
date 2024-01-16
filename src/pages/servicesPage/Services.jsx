@@ -22,12 +22,15 @@ const StyledServicesContainer = styled.div`
 `;
 function Services() {
   const [activeItem, setActiveItem] = useState("catering");
-  const receivedData = data[activeItem];
-  if (!receivedData) return;
+  const servicesData = data.services[activeItem];
   return (
     <StyledServicesContainer>
       <ServicesMenu activeItem={activeItem} setActiveItem={setActiveItem} />
-      <ContentPage data={receivedData} activeItem={activeItem} />
+      {servicesData ? (
+        <ContentPage data={servicesData} activeItem={activeItem} />
+      ) : (
+        <p>ERROR loading {activeItem} data</p>
+      )}
     </StyledServicesContainer>
   );
 }
