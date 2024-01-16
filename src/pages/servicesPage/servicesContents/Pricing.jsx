@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import icons from "../../../utility/icons";
 import Rating from "./Rating";
 
 const StyledItem = styled.div`
@@ -36,12 +35,13 @@ function Pricing({ data }) {
       <RatingStars>
         <Rating num={item.rating} />
       </RatingStars>
-      <p>
-        {icons[item.id]}
-        {item.count}
-      </p>
-      {item.skill && <p>Skill: {item.skill}%</p>}
-      {item.diversity && <p>diversity: {item.diversity}%</p>}
+
+      {item.economy && <p>Economy:{item.economy}€</p>}
+      {item.premium && <p>Premium: {item.premium}€</p>}
+
+      {item.referal && <p>Referal:10%</p>}
+      {item.loyality && <p>Loyality: 20%</p>}
+
       <button>MANAGE</button>
     </StyledItem>
   ));
