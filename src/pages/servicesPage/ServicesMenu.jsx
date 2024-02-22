@@ -6,8 +6,8 @@ import { FaCoins } from "react-icons/fa6";
 
 const StyledMenu = styled.li`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   text-transform: uppercase;
   width: 400px;
@@ -26,7 +26,8 @@ const MenuItem = styled.div`
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.06));
 `;
 
-const HorizontalLine = styled.div`
+// HorizontalLine is already a reusable UI component but this one remains unique to avoid any CSS changes.
+const MenuHorizontalLine = styled.div`
   grid-column: -5 / -1;
   display: flex;
   align-self: center;
@@ -73,7 +74,7 @@ function ServicesMenu({ activeItem, setActiveItem }) {
       >
         <GiAutoRepair />
       </MenuItem>
-      <HorizontalLine />
+      <MenuHorizontalLine />
       <ActiveItem>{activeItem}</ActiveItem>
     </StyledMenu>
   );

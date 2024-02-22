@@ -21,7 +21,7 @@ const StyledServicesContainer = styled.div`
   }
 `;
 function Services() {
-  const [activeItem, setActiveItem] = useState("catering");
+  const [activeItem, setActiveItem] = useState("meintenance");
   const servicesData = data.services[activeItem];
   return (
     <StyledServicesContainer>

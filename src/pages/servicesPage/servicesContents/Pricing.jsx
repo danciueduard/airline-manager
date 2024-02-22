@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Rating from "./Rating";
+import icons from "../../../utility/icons";
+import HorizontalLine from "../../../ui/HorizontalLine";
 
 const StyledItem = styled.div`
   display: flex;
@@ -11,20 +13,15 @@ const StyledItem = styled.div`
     margin: 0;
     text-transform: capitalize;
   }
+
+  p {
+    font-size: 1.2rem;
+  }
 `;
 
 const RatingStars = styled.span`
   display: flex;
   color: var(--secondary-color);
-`;
-
-const HorizontalLine = styled.div`
-  grid-column: -5 / -1;
-  display: flex;
-  align-self: start;
-  width: 8rem;
-  height: 1px;
-  background-color: var(--primary-color);
 `;
 
 function Pricing({ data }) {
@@ -36,11 +33,27 @@ function Pricing({ data }) {
         <Rating num={item.rating} />
       </RatingStars>
 
-      {item.economy && <p>Economy:{item.economy}€</p>}
-      {item.premium && <p>Premium: {item.premium}€</p>}
+      {item.economy && (
+        <p>
+          <span className="icon">{icons.economy}</span> Economy:{item.economy}€
+        </p>
+      )}
+      {item.premium && (
+        <p>
+          <span className="icon">{icons.premium}</span> Premium: {item.premium}€
+        </p>
+      )}
 
-      {item.referal && <p>Referal:10%</p>}
-      {item.loyality && <p>Loyality: 20%</p>}
+      {item.referal && (
+        <p>
+          <span className="icon">{icons.referal}</span> Referal:10%
+        </p>
+      )}
+      {item.loyality && (
+        <p>
+          <span className="icon">{icons.loyality}</span> Loyality: 20%
+        </p>
+      )}
 
       <button>MANAGE</button>
     </StyledItem>

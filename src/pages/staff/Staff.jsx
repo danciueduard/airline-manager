@@ -20,10 +20,14 @@ const StyledStaff = styled.div`
 function Staff() {
   return (
     <StyledStaff>
-      <StaffItem imgSrc="/pilot.jpg" label="Pilots" />
-      <StaffItem imgSrc="/cabin-crew.jpg" direction="-70%" label="Cabin Crew" />
+      <StaffItem imgSrc="img/pilot.jpg" label="Pilots" />
       <StaffItem
-        imgSrc="/workers.jpg"
+        imgSrc="img/cabin-crew.jpg"
+        direction="-70%"
+        label="Cabin Crew"
+      />
+      <StaffItem
+        imgSrc="img/workers.jpg"
         direction="-70%"
         label="Ground Workers"
       />

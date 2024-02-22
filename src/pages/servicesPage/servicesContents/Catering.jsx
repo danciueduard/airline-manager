@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import icons from "../../../utility/icons";
 import Rating from "./Rating";
+import HorizontalLine from "../../../ui/HorizontalLine";
 
 const StyledItem = styled.div`
   display: flex;
@@ -12,20 +13,15 @@ const StyledItem = styled.div`
     margin: 0;
     text-transform: capitalize;
   }
+
+  p {
+    font-size: 1.2rem;
+  }
 `;
 
 const RatingStars = styled.span`
   display: flex;
   color: var(--secondary-color);
-`;
-
-const HorizontalLine = styled.div`
-  grid-column: -5 / -1;
-  display: flex;
-  align-self: start;
-  width: 8rem;
-  height: 1px;
-  background-color: var(--primary-color);
 `;
 
 function Catering({ data }) {
@@ -37,7 +33,7 @@ function Catering({ data }) {
         <Rating num={item.rating} />
       </RatingStars>
       <p>
-        {icons[item.id]}
+        <span>{icons[item.id]}</span>
         {item.count}
       </p>
       {item.skill && <p>Skill: {item.skill}%</p>}

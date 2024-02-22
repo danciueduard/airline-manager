@@ -7,15 +7,11 @@ const GlobalStyles = createGlobalStyle`
 :root{
 
 
-  // SOME BUGS MIGHT OCCUR IN THIS AREA
-*,
-*::before,
-*::after {
-  /* box-sizing: border-box; */
-}
+
+
 
 body {
-  font-size: 1.7rem;
+  font-size: 1.7rem; 
   padding: 0;
   margin: 0;
   font-family: 'Nova Square', sans-serif;
@@ -73,7 +69,7 @@ a{
 }
 
 p{
-  margin: 0
+  margin: 0;
 }
 
 `;
