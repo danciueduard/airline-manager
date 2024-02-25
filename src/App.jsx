@@ -1,7 +1,7 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./AppLayout";
-import Map from "./components/Map";
+import Map from "./pages/map/Map";
 import Airports from "./pages/airport/Airports";
 import Fleet from "./pages/fleet/Fleet";
 import Staff from "./pages/staff/Staff";

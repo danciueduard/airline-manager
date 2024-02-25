@@ -61,4 +61,33 @@ export const dummyAirport = {
     lon: 27.6205997467,
     tz: "Europe/Bucharest",
   },
+  "00CA": {
+    icao: "00CA",
+    iata: "",
+    name: "Goldstone /Gts/ Airport",
+    city: "Barstow",
+    state: "California",
+    country: "US",
+    elevation: 3038,
+    lat: 35.3504981995,
+    lon: -116.888000488,
+    tz: "America/Los_Angeles",
+  },
+  "00CO": {
+    icao: "00CO",
+    iata: "",
+    name: "Cass Field",
+    city: "Briggsdale",
+    state: "Colorado",
+    country: "US",
+    elevation: 4830,
+    lat: 40.6222000122,
+    lon: -104.34400177,
+    tz: "America/Denver",
+  },
 };
+
+export const routes = [
+  [dummyAirport["LROP"], dummyAirport["LRIA"]],
+  [dummyAirport["00CA"], dummyAirport["00CO"]],
+];
