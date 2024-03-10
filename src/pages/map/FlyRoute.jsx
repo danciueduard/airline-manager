@@ -1,5 +1,6 @@
 import { Marker, Polyline, Popup } from "react-leaflet";
 import L from "leaflet";
+import { useState } from "react";
 
 function calculateRemainingTimePercentage(
   departureTime,
@@ -31,6 +32,7 @@ const percentageRemaining = calculateRemainingTimePercentage(
   landingTime,
   currentTime
 );
+console.log(percentageRemaining);
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -48,6 +50,7 @@ function currentPlanePosition(flyFrom, flyTo, progress) {
 }
 
 function FlyRoute({ startAirport, endAirport }) {
+  const [currentPosition, setCurrentPosition] = useState(50);
   const startAirportCoords = [startAirport.lat, startAirport.lon];
   const endAirportCoords = [endAirport.lat, endAirport.lon];
 
@@ -63,7 +66,7 @@ function FlyRoute({ startAirport, endAirport }) {
         position={currentPlanePosition(
           startAirportCoords,
           endAirportCoords,
-          20
+          currentPosition
         )}
         icon={airplaneIcon}
       >
